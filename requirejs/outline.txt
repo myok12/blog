@@ -1,0 +1,44 @@
+* Intro
+    * Modularity
+    * What is AMD
+        * Not just script loading
+    * Why AMD
+        * If you don't
+            * All code in a few files or
+            * File Splitting Headaches
+                * Dependency managment
+                * html file modifcation
+        * If you do
+            * Encourages loose coupling and low cohesion
+            * 
+
+* How to AMD
+    * Setup
+        * HTML script tag
+        * main.js
+    * 2 ways to define
+        * AMD
+        * CJS
+    * Defining and requesting
+        * Singletons
+        * Constructors
+        * Modules with Dependencies
+
+* Requirejs plugins
+    * Using
+        * Text files - template
+    * Creating
+        * Templating
+    * Caveats
+        * Css plugin
+
+* Configuration
+* Deployment
+    * r.js
+    * almond
+
+* AMD libs
+    * requirejs
+    * Jam
+    * curl
+    * Dojo
