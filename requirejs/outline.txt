@@ -9,13 +9,14 @@
                 * Dependency managment
                 * html file modifcation
         * If you do
-            * Encourages loose coupling and low cohesion
-            * 
+            * Encourages loose coupling 
+                * Very important
 
 * How to AMD
     * Setup
         * HTML script tag
         * main.js
+        * file structure
     * 2 ways to define
         * AMD
         * CJS
@@ -28,14 +29,14 @@
     * Using
         * Text files - template
     * Creating
-        * Templating
+        * Precompiling Templating
     * Caveats
         * Css plugin
 
 * Configuration
 * Deployment
     * r.js
-    * almond
+    * almond.js
 
 * AMD libs
     * requirejs
