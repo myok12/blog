@@ -10,7 +10,6 @@
                 * html file modifcation
         * If you do
             * Encourages loose coupling 
-                * Very important
 
 * How to AMD
     * Setup
@@ -19,7 +18,7 @@
         * file structure
     * 2 ways to define
         * AMD
-        * CJS
+        * CJS <----
     * Defining and requesting
         * Singletons
         * Constructors
