@@ -34,21 +34,21 @@ function Dog(name, age) {
 
     Object.defineProperty(this, {
         name: {
-                value: name,
-                enumerable: true
+            value: name,
+            enumerable: true
+        },
+        age: {
+            set: function (value) {
+                value = parseInt(value, 10);
+                if (isNaN(value))  throw new Error("value set on age is not a number");
+                age = value;
             },
-            age: {
-                set: function (value) {
-                    value = parseInt(value, 10);
-                    if (isNaN(value))  throw new Error("value set on age is not a number");
-                    age = value;
-                },
-                get: function () {
-                    return age;
-                },
-                enumerable: true
-            }
-        });
+            get: function () {
+                return age;
+            },
+            enumerable: true
+        }
+    });
 }
 ```
 
@@ -57,12 +57,12 @@ I used `ES5` syntax in a few different ways here. For the `name` property I set 
 ```javascript
 
 Object.defineProperties(Dog.prototype, {
-        bark: {
-            value: function () {
-                console.log("Bark!");
-            }
-        } 
-    });
+    bark: {
+        value: function () {
+            console.log("Bark!");
+        }
+    } 
+});
 
 ``` 
 
@@ -156,8 +156,8 @@ On the note of making properties unwritable and undeletable, we can make constan
 ```javascript
 
 var CONST: {
-        PI: Math.PI,
-        FOO: "bar"
+    PI: Math.PI,
+    FOO: "bar"
 };
 
 Object.freeze(CONST);
