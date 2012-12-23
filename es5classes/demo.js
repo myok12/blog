@@ -84,8 +84,8 @@ var __hasProp = {}.hasOwnProperty,
 
             // Methods can no longer be added!
             parent.prototype.isSealed() ? 
-                parent.prototype.seal() : 
-                parent.prototype.preventExtensions();
+                child.prototype.seal() : 
+                child.prototype.preventExtensions();
 
             return child;
         }
