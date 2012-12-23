@@ -68,7 +68,7 @@ Object.defineProperties(Dog.prototype, {
 
 Dog gets a basic `bark` method, but notice the omission of the `enumerable` property. If a user of class for some reason decides to iterate of over a `dog` object; this method will be omitted from the iteration. Nice! No need to test if the property you are currently iterating is a `Function` or not. Sweet!
 
-> Note: If it is important to know what methods exist on the prototype use the [`Object.getPrototypeOf`](http://) method to see all of the non-enumerable properties.
+> Note: If it is important to know what methods exist on the prototype use the [`Object.getOwnPopertyNames`](http://https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames) method to see all of the non-enumerable properties.
 
 ### Adding Inheritance
 
