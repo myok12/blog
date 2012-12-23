@@ -145,7 +145,7 @@ The code should run in all modern browsers and in a nodejs environment.
 Perhaps we want a subclass to be able to override existing methods, but not add more methods to it. [Object.seal](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/seal) prevents new methods from being added to the prototype and prevents them from being deleted. All writable methods remain writable and all unwritable remain unwritable.
 
 ```javascript
-Object.preventExtensions(Bulldog.prototype)
+Object.seal(Bulldog.prototype)
 // TypeError: Can't add property foo, object is not extensible
 Bulldog.prototype.foo = function () {};
 ```
