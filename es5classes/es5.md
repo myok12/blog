@@ -94,9 +94,6 @@ function Bulldog() {
 }
 
 Object.defineProperties(Bulldog.prototype, {
-
-    // If someone wants to inherit from Bulldog
-    // They must use the same speak command
     bark: {
         value: function () {
             console.log("Wooooof");
@@ -111,7 +108,7 @@ Object.defineProperties(Bulldog.prototype, {
 
 ```
 
-Pretty simple. I override `Dog`'s speak method with my another. Neither of these methods have have properties set other than value keeping it nice and safe.
+Pretty simple. I override `Dog`'s speak method with my another. Neither of these methods have have properties set other than value keeping it nice and safe. These properties cannot be overriden or deleted.
 
 ### Going Final
 
