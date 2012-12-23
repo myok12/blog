@@ -2,7 +2,7 @@
 "use strict";
 
 // Add some methods to make coding easier
-// No need to set the context of for instances
+// No need to set the context of instances
 Object.defineProperties(Object.prototype, {
     defineProperty: {
         value: function (name, desc) {
@@ -66,13 +66,14 @@ var __hasProp = {}.hasOwnProperty,
         child.prototype = new ctor(); 
         child.__super__ = parent.prototype; 
         
-            
-
         // Seal in the methods, methods that are overwritable are still overwritable
+        // or Prevent them from being extendeded
         if (parent.prototype.isSealed() || !parent.prototype.isExtensible()) {
+            
             // We must add any overwritable methods
             Object.getOwnPropertyNames(parent.prototype).forEach(function (key) {
                 if (key !== "constructor") {
+
                     // Add any writable methods so that they can be overridden.
                     var descriptor = Object.getOwnPropertyDescriptor(this, key);
                     if (descriptor.writable) {
@@ -81,11 +82,11 @@ var __hasProp = {}.hasOwnProperty,
                 }
             }, parent.prototype);
 
-            if (parent.prototype.isSealed()) {
-                child.prototype.seal();
-            } else {
-                child.prototype.preventExtensions();
-            }
+            // Methods can no longer be added!
+            parent.prototype.isSealed() ? 
+                parent.prototype.seal() : 
+                parent.prototype.preventExtensions();
+
             return child;
         }
 
